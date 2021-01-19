@@ -1,0 +1,13 @@
+version: '3'
+services: 
+  jenkins:
+    container_name: jenkins-app
+    image: jenkins/jenkins
+    ports: 
+      - "8080:8080"
+    volumes: 
+      - $PWD/jenkins-scripts:/var/jenkins-scripts
+    networks: 
+      - net
+networks: 
+  net:  
